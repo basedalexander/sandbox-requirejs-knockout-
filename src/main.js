@@ -8,12 +8,11 @@
 //  }
 //});
 
-require(['task-manager'], function (taskManger) {
+require(['task-manager', 'smokesignals'], function (taskManger, smokesignals) {
   'use strict';
 
-  return {
-    init: function () {
-      console.log(taskManger.createTask('dick'));
-    }
-  }
+
+  console.log(smokesignals);
 });
+
+define();

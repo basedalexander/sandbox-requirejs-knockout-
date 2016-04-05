@@ -1,10 +1,17 @@
 require.config({
-  baseUrl: 'external',
+  baseUrl: 'src',
+  deps: ['main'],
+  enforceDefine: true,
+
   paths: {
-    ko: '../external/knockout.min',
-    jquery: '../external/jquery.min'
+    'ko': '../external/knockout.min',
+    'jquery': '../external/jquery.min',
+    'smokesignals': '../external/smokesignals'
   },
   shim: {
+    'smokesignals': {
+      exports: 'smokesignals'
+    },
     'not-amd': {
       deps: ['jquery'],
       exports: 'foo'
@@ -17,3 +24,5 @@ require.config({
 //
 //  main.init();
 //});
+
+define();
