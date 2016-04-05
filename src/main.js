@@ -1,18 +1,15 @@
-//define(['task-manager'], function (taskManger) {
-//  'use strict';
-//
-//  return {
-//    init: function () {
-//      console.log(taskManger.createTask('dick'));
-//    }
-//  }
-//});
-
-require(['task-manager', 'smokesignals'], function (taskManger, smokesignals) {
+require([
+  'text!../views/app.html',
+  'view-models/app',
+  'renderer'
+], function (appView, App, renderer) {
   'use strict';
 
 
-  console.log(smokesignals);
+  var container = document.body,
+      viewModel = new App();
+
+  renderer.render(container, appView, viewModel);
 });
 
 define();

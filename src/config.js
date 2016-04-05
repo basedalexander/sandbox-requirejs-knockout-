@@ -1,6 +1,6 @@
 require.config({
   baseUrl: 'src',
-  deps: ['main'],
+  deps: ['main', 'ko'],
   enforceDefine: true,
 
   paths: {

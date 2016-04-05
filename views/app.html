@@ -1,15 +1,19 @@
 <article class="todo_app">
     <header class="app_header">
-        <h1></h1>
+        <h1 data-bing="text: title"></h1>
 
         <div class="controls">
             <div class="row">
-                <input type="text"/>
-                <button></button>
+                <input
+                    data-bind='attr: { placeholder: placeholderText}, value: listName'
+                    type="text"/>
+                <button data-bind="text: createText, enable: enableAdd"></button>
             </div>
             <div class="row">
-                <select name="" id="" class="saved_list"></select>
-                <button></button>
+                <select name="" id="" class="saved_list">
+                    <option data-bind="text: noListsText"></option>
+                </select>
+                <button data-bind="text: loadText, enable: enableLoad"></button>
             </div>
         </div>
     </header>
