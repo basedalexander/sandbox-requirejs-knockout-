@@ -6,7 +6,8 @@ require.config({
   paths: {
     'ko': '../external/knockout.min',
     'jquery': '../external/jquery.min',
-    'smokesignals': '../external/smokesignals'
+    'smokesignals': '../external/smokesignals',
+    'text': '../external/text'
   },
   shim: {
     'smokesignals': {
