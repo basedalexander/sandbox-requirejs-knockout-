@@ -8,6 +8,7 @@ require.config({
     'jquery': '../external/jquery.min',
     'smokesignals': '../external/smokesignals',
     'text': '../external/text',
+    'i18n': '../external/i18n',
     'views': '../views'
   },
   shim: {

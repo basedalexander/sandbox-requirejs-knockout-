@@ -2,7 +2,7 @@ define(function () {
   'use strict';
 
   function Task (name) {
-    this.completed = false;
+    this.isCompleted = false;
     this.name = name;
   }
 

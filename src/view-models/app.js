@@ -1,5 +1,5 @@
 define([
-      'ui-strings',
+      'i18n!nls/ui-strings',
       'ko',
       'view-models/list',
       'text!views/list.html',
@@ -30,21 +30,22 @@ define([
 
     this.addList = function () {
       var list = listManager.createList(this.listName()),
-        container = document.querySelector('.todo_app section');
+        container = document.querySelector('.todo_app section'),
+        listViewModel = new ListViewModel();
 
-      this.listViewModel = new ListViewModel();
-      this.listViewModel.listName(list.id);
-      this.listViewModel.list = list;
+      listViewModel.listName(list.id);
+      listViewModel.list = list;
 
       this.listName('');
 
-      renderer.render(container, listView, this);
+      renderer.render(container, listView, listViewModel);
     }.bind(this);
 
     this.removeList = function (container) {
       ko.cleanNode(container);
       container.innerHTML = '';
-    }
+    };
+
 
   }
 

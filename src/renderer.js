@@ -1,15 +1,15 @@
 define(['ko'], function (ko) {
   'use strict';
 
-  function render(container, view, viewModel) {
+  function render(container, view, viewModel, useChild) {
 
-    console.log('viewModel is ' , viewModel);
     var intermediateContainer = document.createElement('div');
 
     intermediateContainer.innerHTML = view;
     container.appendChild(intermediateContainer);
 
-    ko.applyBindings(viewModel, container);
+    ko.applyBindings(viewModel,
+      (useChild) ? intermediateContainer.childNodes[0] : container);
   }
 
   return {
