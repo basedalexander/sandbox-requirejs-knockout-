@@ -1,6 +1,5 @@
 define(['list', 'exports'], function (List, exports) {
-
-  //console.log(this === exports);
+  'use strict';
 
   function createList (listId) {
     return new List(listId)

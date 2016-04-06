@@ -1,13 +1,14 @@
 require.config({
   baseUrl: 'src',
-  deps: ['main', 'ko'],
+  deps: ['main'],
   enforceDefine: true,
 
   paths: {
     'ko': '../external/knockout.min',
     'jquery': '../external/jquery.min',
     'smokesignals': '../external/smokesignals',
-    'text': '../external/text'
+    'text': '../external/text',
+    'views': '../views'
   },
   shim: {
     'smokesignals': {
@@ -19,11 +20,6 @@ require.config({
     }
   }
 });
-//
-//require(['main'], function (main) {
-//  'use strict';
-//
-//  main.init();
-//});
+
 
 define();

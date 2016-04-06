@@ -2,6 +2,8 @@ define(['ko'], function (ko) {
   'use strict';
 
   function render(container, view, viewModel) {
+
+    console.log('viewModel is ' , viewModel);
     var intermediateContainer = document.createElement('div');
 
     intermediateContainer.innerHTML = view;

@@ -3,5 +3,8 @@ define({
   createText: 'Create list',
   placeholderText: 'List name',
   noListsText: 'No saved lists',
-  loadText: 'load list'
+  loadText: 'load list',
+  createTaskPlaceholderText: 'Task name',
+  addTask: 'Add task',
+  saveList: 'Save list'
 });
