@@ -1,10 +1,11 @@
 require.config({
   baseUrl: '../src',
   paths: {
+    'spec': '../test/spec',
     'jasmine': '../test/lib/jasmine-2.4.1/jasmine',
     'jasmine-html': '../test/lib/jasmine-2.4.1/jasmine-html',
     'boot': '../test/lib/jasmine-2.4.1/boot',
-    'spec': '../test/spec'
+    'task': '../test/mocks/task'
   },
   shim: {
     'jasmine-html': {
@@ -24,6 +25,8 @@ var specs = [
 
 require(['boot'], function () {
   require(specs, function () {
+
+    //trigger Jasmine
     window.onload();
   });
 });
