@@ -10,6 +10,16 @@ define(['ko'], function (ko) {
       task.parentNode.parentNode.removeChild(task.parentNode);
       this.emit('taskremoved');
     }.bind(this);
+
+    this.completeTaskClass = ko.computed(function () {
+      return (this.isCompleted() ? 'complete' : '');
+    }, this);
+
+    this.toggleTaskComplete = function () {
+      this.isCompleted(!this.isCompleted());
+      this.emit('taskcompleted');
+      return true;
+    }.bind(this);
   }
 
   return TaskViewModel;

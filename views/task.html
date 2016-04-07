@@ -1,13 +1,14 @@
-<li data-bind="attr: { id: id }">
+<li data-bind="attr: { id: id }, css: completeTaskClass">
     <div>
         <input
-            data-bind='checked: isCompleted'
+            data-bind='
+                attr: { checked: isCompleted },
+                event: { click: toggleTaskComplete }'
             type="checkbox"
             name="completed"/>
-        <label
-            data-bind='text: name'
-            for="">
-        </label>
+
+        <label data-bind='text: name'></label>
+
         <a
             data-bind="event: { click: deleteTask }"
             href="#"

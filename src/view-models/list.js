@@ -45,6 +45,7 @@ define([
 
       smokesignals.convert(taskViewModel);
       taskViewModel.on('taskremoved', this.removeTask);
+      taskViewModel.on('taskcompleted', this.completeTaskHandler);
 
       return taskViewModel;
     }.bind(this);
@@ -52,6 +53,16 @@ define([
     this.removeTask = function (index) {
       this.list.tasks.splice(index, 1);
     }.bind(this);
+
+    this.completeTask = function (taskViewModel) {
+      var taskIndex = taskViewModel.id.split('-')[1];
+      this.list.tasks[taskIndex].isCompleted = !this.list.tasks[taskIndex].isCompleted;
+    }.bind(this);
+
+    this.saveList = function () {
+      listManager.saveList(this.list);
+    }.bind(this);
+
 
   }
 

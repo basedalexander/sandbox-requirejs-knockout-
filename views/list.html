@@ -1,23 +1,9 @@
-<!--<header>-->
-    <!--<h1 data-bind="text: listViewModel.listName"></h1>-->
-    <!--<input-->
-        <!--data-bind='attr: { placeholder: listViewModel.placeholderText },textInput: listViewModel.taskName'-->
-        <!--type="text"/>-->
-    <!--<button-->
-        <!--data-bind="-->
-            <!--text: listViewModel.addTaskText,-->
-            <!--enable: listViewModel.enableAdd,-->
-            <!--event: { click: listViewModel.addTask }-->
-            <!--">-->
-    <!--</button>-->
-    <!--<button data-bind="text: listViewModel.saveListText"></button>-->
-<!--</header>-->
-<!--<ul></ul>-->
-
 <header>
     <h1 data-bind="text: listName"></h1>
     <input
-            data-bind='attr: { placeholder: placeholderText },textInput: taskName'
+            data-bind='
+                attr: { placeholder: placeholderText },
+                textInput: taskName'
             type="text"/>
     <button
             data-bind="
@@ -27,6 +13,10 @@
             "
             >
     </button>
-    <button data-bind="text: saveListText"></button>
+    <button data-bind="
+            text: saveListText,
+            event: { click: saveList }
+            ">
+    </button>
 </header>
 <ul></ul>

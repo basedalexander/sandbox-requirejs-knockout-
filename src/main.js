@@ -5,7 +5,6 @@ require([
 ], function (appView, App, renderer) {
   'use strict';
 
-
   var container = document.body,
       viewModel = new App();
 
